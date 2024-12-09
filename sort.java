@@ -47,11 +47,11 @@ public class sort{
     }
 
     public static void selectionSortAlternativeVersion(int[] arr){
-        int n = arr.length;
-        for (int i = n-1; i >= 0; i--){
+        int n = arr.length-1;
+        for (int i = n; i > -1; i--){
             int minIndex = i;
-            for (int j = i; j > n; j--)
-                if (arr[j] > arr[minIndex])
+            for (int j = i; j > n; j++)
+                if (arr[j] < arr[minIndex])
                     minIndex=j;
             swap(arr, minIndex, i);
         }
